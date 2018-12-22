@@ -1,0 +1,191 @@
+body{
+    background-color:#f5f5f5;
+    color:#5b5b59;
+    margin: 0px;
+    font-family: 'メイリオ',Meiryo,'ＭＳ Ｐゴシック',Arial,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Osaka,sans-serif;
+
+}
+
+ol,ul{
+    list-style: none;
+} 
+
+.headcontent {
+    width: 100%;    
+    color:#efefef;
+    text-align: center;
+    padding: 0%;
+    background-image: linear-gradient(-135deg, #5FA580, #2599B6);
+}
+
+.headcontent h1{
+    padding: 0%;
+    margin: 0%;
+    width:100%;
+    text-align: center;
+    letter-spacing: 1.1em;
+    font-size: 6.5em;
+}
+
+.headcontent ul{
+    width:100%;
+    display: flex;
+    padding: 0%;
+    transition: all 2s;
+}
+
+.headcontent li{
+    width: 50%;
+    line-height: 2;
+    letter-spacing: 0.8em;
+    font-size:1.8em;
+    transition: all 2s;
+}
+
+.headcontent ul li:hover{
+    background-color: #ffffff50;
+    color: #5b5b59;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.coutionContents{
+    text-align: center;
+}
+
+.soundcapcontent{
+    width:90%;
+    margin:auto;
+}
+
+.soundcapcontent h2{
+    text-align:center;
+
+}
+
+.buttoncontents{
+    margin: 10px;
+}
+
+.statusContents{
+    margin: -20px 20px;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.PowerOnButton, .PowerOffButton {
+    display: inline-block;
+    text-decoration: none;
+    color: #404040;/*アイコン色*/
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+}
+.PowerOnButton .fa {
+    line-height: 80px;
+}
+.PowerOnButton, .PowerOffButton :active {/*押したとき*/
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: none;
+}
+
+#scroll{
+    width:90%;
+    margin:auto;
+    overflow: auto;
+    padding:16px;
+    border: 1px solid #ccc;
+    background:#fffff7;
+    color:#404040;
+    border-radius: 6px;
+}
+
+#resultSentence{
+    height:200px;
+    width:90%;
+    margin:auto;
+    overflow: auto;
+    padding:16px;
+    border: 1px solid #ccc;
+    background:#fffff7;
+    color:#404040;
+    border-radius: 6px;
+}
+
+.scrollContents{
+    width:80%;
+    margin:auto;
+}
+
+.scrollContents p{
+    text-align: left;
+    
+}
+
+.imagerecogcontent{
+    width:90%;
+    margin:auto;
+}
+
+.imagerecogcontent h3{
+    font-size:1.5em;
+    text-align: center;
+} 
+
+.resultImageRecognition{
+    height:200px;
+    width:90%;
+    margin:auto;
+    overflow:auto;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background:#fffff7;
+    color:#404040;
+    border-radius: 6px;
+
+}
+
+#spin{
+    width: 100%;
+    position: fixed;
+    top:50%;
+}
+
+/*spin.jsの分をとりまここにおく*/
+@keyframes spinner-line-fade-more {
+    0%, 100% {
+        opacity: 0; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}  
+
+@keyframes spinner-line-fade-quick {
+    0%, 39%, 100% {
+        opacity: 0.25; /* minimum opacity */
+    }
+    40% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-line-fade-default {
+    0%, 100% {
+        opacity: 0.22; /* minimum opacity */
+    }
+    1% {
+        opacity: 1;
+    }
+}
+/*ここまで*/

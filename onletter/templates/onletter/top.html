@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>GAZON</title>
+        <meta name="description" content="このサイトは、まさによし（@Exactly_Good）が音声認識、画像文字認識を試してみたいと思い立ち作成したものです。">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- content属性にページの著者情報を記述 -->
+        <meta name="author" content="まさによし（@Exactly_Good）">
+        <!--<link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png"> -->
+        <!-- favicon.icoはルートディレクトに配置 -->
+        <!--static file css-->
+        <script src="{% static 'onletter/spin.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'onletter/style.css' %}" />
+        <!--font Awesome CDN css-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!--jquery file -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--spin.jsでのスピナー-->
+        <div id="spin"></div>
+        <!--トップの表示と切り替えメニュー-->
+        <div class="headcontent">
+            <h1>GAZON</h1>
+            <ul>
+                <li>音声認識</li>
+                <li>画像文字認識</li>
+            </ul>
+        </div>
+        <div class="coutionContents">
+            <p>現在スマホでの音声認識が挙動不審なのでスマホ使用不可。PC専用です</p>
+        </div>
+        <!--音声認識エリア-->
+        <div class="soundcapcontent" id="soundReg">
+            <h2>音声認識</h2>
+            <div class="buttoncontents">
+                <button class="PowerOnButton" id="startbtn" onClick="soundCognitionLongUse();">START</button>
+                <button class="PowerOffButton" id="stopbtn">STOP</button>
+                <textarea id="status" class="statusContents" row="1" col="20"></textarea>
+            </div>
+            <textarea id="scroll" class="scrollContents" row="10" col="40"> </textarea>            
+            <textarea id="resultSentence" class="resultSentence" row="30"col="50"> </textarea>
+        </div>
+        <hr>
+        <!--画像文字認識-->
+        <div class="imagerecogcontent">
+            <h3>画像文字認識</h3>
+            <div>
+                <p>ここにアップロードした画像が出ます。</P>
+                <div>
+                    <img src="{{ uImage.uploadImage.url }}"/>
+                </div>
+            </div>
+            <form action="{% url 'onletter:toppage' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ imageUploadForm }}
+            <input id="upload" type="submit" value="UPLOAD">
+            </form>
+            <div><p>認識結果:</p>{{ resultRecognition }}</div>
+        </div>
+        <hr>
+
+        
+        <!--js file -->
+        <script src="{% static 'onletter/index.js' %}"></script>
+        <script src="{% static 'onletter/voicerecognition.js' %}"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        
+    </body>
+</html>
