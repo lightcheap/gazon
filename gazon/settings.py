@@ -79,7 +79,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'gazon',
+        'NAME': 'gazon2',
         'USER': 'postgres',
         'PASSWORD': 'mm358358',
         'HOST': '127.0.0.1',
